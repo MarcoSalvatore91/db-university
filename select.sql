@@ -9,3 +9,14 @@ WHERE YEAR(`date_of_birth`) = 1990
 SELECT `name`, `cfu` AS `credits`
 FROM `courses`
 WHERE `cfu` > 10
+
+-- 3. Selezionare tutti gli studenti che hanno più di 30 anni
+
+SELECT `name`, `surname`, `date_of_birth` AS `age`
+FROM `students`
+WHERE YEAR(`date_of_birth`) < 1992
+AND MONTH(`date_of_birth`) < 03
+AND DAY(`date_of_birth`) < 09
+ORDER BY `date_of_birth` ASC
+
+-- Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea
