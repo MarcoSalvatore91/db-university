@@ -19,4 +19,11 @@ AND MONTH(`date_of_birth`) < 03
 AND DAY(`date_of_birth`) < 09
 ORDER BY `date_of_birth` ASC
 
--- Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea
+-- 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea
+
+SELECT `name`, `period` AS `I_semester`, `year`
+FROM `courses`
+WHERE `period` LIKE 'I semestre'
+AND `year` = 1
+
+-- 
