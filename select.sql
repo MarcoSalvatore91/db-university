@@ -40,4 +40,10 @@ SELECT `name` AS `courses_master_degree`, `level`
 FROM `degrees`
 WHERE `name` LIKE '%Magistrale%'
 
--- 
+-- 7. Da quanti dipartimenti è composta l'università?
+
+SELECT COUNT(*) AS `total_depatments`
+FROM `departments`
+WHERE `id`
+
+-- 8. Quanti sono gli insegnanti che non hanno un numero di telefono?
