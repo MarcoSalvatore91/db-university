@@ -33,3 +33,11 @@ FROM `exams`
 WHERE `date` LIKE '2020-06-20'
 AND `hour` > '14:%:%'
 ORDER BY `hour` ASC
+
+-- 6. Selezionare tutti i corsi di laurea magistrale
+
+SELECT `name` AS `courses_master_degree`, `level`
+FROM `degrees`
+WHERE `name` LIKE '%Magistrale%'
+
+-- 
