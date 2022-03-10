@@ -56,3 +56,13 @@ ON `courses`.`id` = `course_teacher`.`course_id`
 JOIN `teachers`
 ON `teachers`.`id` = `course_teacher`.`teacher_id`
 WHERE `departments`.`name` = 'Dipartimento di Matematica'
+
+-- 7. BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per superare ciascuno dei suoi esami
+
+SELECT `students`.`surname`, `students`.`name`, COUNT(`exam_student`.`student_id`) AS `failed_exam`
+FROM `students`
+JOIN `exam_student`
+ON `students`.`id` = `exam_student`.`student_id`
+WHERE `exam_student`.`vote` <= 18
+GROUP BY `exam_student`.`student_id`
+ORDER BY `students`.`surname` ASC
