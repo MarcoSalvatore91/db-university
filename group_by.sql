@@ -12,7 +12,7 @@ GROUP BY `office`
 
 -- 3. Calcolare la media dei voti di ogni appello d'esame
 
-SELECT COUNT(*) AS `number`, `exam_id` AS `exam`, ROUND(AVG(`vote`), 0)
+SELECT COUNT(*) AS `number`, `exam_id` AS `exam`, ROUND(AVG(`vote`))
 FROM `exam_student`
 GROUP BY `exam`
 
